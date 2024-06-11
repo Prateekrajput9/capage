@@ -1,0 +1,876 @@
+/* Container for the whole header */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+.abc{
+    
+
+    width: 100%;
+    margin: 0;
+    
+}
+/* Reset margins and padding for html and body */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: #000000;
+    background: -webkit-linear-gradient(100deg, #1b1b1b 45%, #3c0101 55%);
+background: linear-gradient(100deg, #1b1b1b 45%, #3c0101 55%);
+}
+
+
+/* Header styling */
+.header {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a background color for better visibility */
+    backdrop-filter: blur(45px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header is always on top */
+    margin: 0;
+}
+
+/* Adjust logo styling */
+#imglogo {
+    height: 40px; /* Adjust the height as needed */
+     /* Adjust spacing as needed */
+     margin-left: 0;
+     margin-right: 60px;
+}
+
+/* Navigation bar styling */
+.nav {
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Take up remaining space */
+    margin: 0;
+}
+
+/* Navigation link styling */
+.nav-link {
+    color: #ecf0f1; /* Light grey */
+    font-size: 1.2em;
+    margin: 10px 25px;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link:hover {
+    color: #8f2806; /* Turquoise */
+    border-bottom: 2px solid #ffffff; /* Turquoise */
+}
+
+/* Button styling */
+.button {
+    color: #ecf0f1; /* Light grey */
+    padding: 10px 20px;
+    margin-left: 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #3a3838; 
+    text-decoration: none;
+    color: #ffffff; /* Darker turquoise */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .nav-link {
+        margin: 10px 0;
+    }
+    
+    .button {
+        margin: 20px 0 0 0;
+    }
+}
+
+
+
+
+
+#blur-card {
+    margin-top: 200px;
+    padding: 20px;
+    border-radius: 10px;
+   
+    text-align: center;
+    max-width: 600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Berkshire Swash";
+    font-weight: 400;
+    font-style: normal;
+    opacity:1;
+   
+}
+
+#blur-card h1 {
+    font-size: 6em; /* Larger font size */
+    margin: 0;
+    padding: 0;
+}
+
+#flux {
+    font-family: "Berkshire Swash", serif; /* Bold font */
+    color: #750e0e; /* Blue color */
+}
+
+#first, #second {
+    font-family: "Berkshire Swash", serif; /* Same font as Esummit */
+    color: #ea4335; /* Red color */
+    font-size: 1em; /* Same size as Esummit */
+}
+
+.subheading {
+    font-size: 2.4em;
+    color: #fffcfc;
+    margin: 10px 0;
+}
+
+#applybtn {
+    background-color: #1a73e8; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#applybtn:hover {
+    background-color: #042750; /* Darker blue on hover */
+}
+/*css for about2*/
+/* General container styling */
+
+
+/* about2 section styling */
+.about2 {
+     background-color: none;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+/* Heading styling */
+.about2 h1 {
+    font-size: 2.5em;
+  
+    margin-bottom: 20px;
+}
+
+/* Span styling for heading */
+
+#second {
+    color: rgb(187, 185, 185); /* Blue */
+}
+#first {
+    color: rgb(187, 185, 185); /* Red */
+}
+
+/* Paragraph styling */
+.text-center p {
+    font-size: 1.2em;
+    color: #e1e2e3; /* Slightly lighter dark blue */
+    font-family: Josefin Sans, sans-serif;
+    line-height: 1.6;
+    margin: 8px 35px;
+}
+
+
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about2 h1 {
+        font-size: 2em;
+    }
+
+    .text-center p {
+        font-size: 1em;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+    }
+}
+/* css for why ca */
+/* General container styling */
+#why-ca {
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#whycatext {
+    font-family: "Berkshire Swash", serif;
+    color: #750e0e;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+/* Flex container to center content */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Rotated text styling */
+.text-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+
+
+
+/* Card-incentives container styling */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   
+    width: 90%;
+   gap: 30px;
+   margin: auto;
+}
+
+.card {
+    perspective: 1000px; /* Enables 3D effect */
+    position: relative;
+    width: 250px;
+    height: 400px;
+    margin: auto;
+    cursor: pointer;
+}
+/* Image styling */
+.card-image{
+    height: 70px;
+    width: 60px;
+}
+/* Front and back of the card-incentives */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    transition: transform 0.6s;
+}
+
+/* Front of the card-incentives */
+.card-front {
+    background: linear-gradient(180deg, rgba(255, 89, 0, 0.58), rgba(163, 27, 27, 0.58) .01%, rgba(0, 0, 0, .58));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 8px solid #606060;
+    color: #fff;
+}
+
+/* Back of the card-incentives */
+.card-back {
+    background: linear-gradient(180deg, rgba(255, 89, 0, 0.58), rgba(163, 27, 27, 0.58) .01%, rgba(0, 0, 0, .58));
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 8px solid #606060;
+}
+
+/* Flip the card-incentives on hover */
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+
+
+/* Text styling */
+.card-title {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Berkshire Swash", serif;
+}
+
+.card-text {
+    margin: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        height: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #whycatext {
+        font-size: 40px;
+    }
+    .card {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 400px;
+    }
+
+    .rotated-word {
+        font-size: 2rem;
+    }
+
+    #whycatext {
+        font-size: 30px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .card-text {
+        font-size: 0.9em;
+    }
+}
+
+/* Responsive design adjustments */
+
+/*css for incentives */
+
+
+
+#incentives {
+    
+    color: #fff;
+    
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Berkshire Swash", serif;
+}
+
+.text-white {
+    color: #fff;
+    font-family: "Berkshire Swash", serif;
+}
+
+.highlight-text {
+    color: #f8c195; /* Peach color */
+    font-family: "Berkshire Swash", serif;
+}
+
+.accent-text {
+    color: #981ba3; /* Purple color */
+    font-family: "Berkshire Swash", serif;
+}
+
+/* Incentives list styling */
+#why-apply {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+#why-apply::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+/* style for incentives*/
+/* Container styling */
+.container-inc {
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+/* Heading styling */
+.heading-inc {
+    font-family: 'Arial', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+  
+    margin-bottom: 20px;
+}
+
+.text-white {
+    color: #750e0e;
+}
+
+.highlight-text { color: white;
+}
+
+.accent-text {
+    color: white;
+}
+
+/* Grid container styling */
+.grid-container-inc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 590px;
+    overflow-y: scroll;
+    
+}
+
+.spacer-inc {
+    display: none; /* Hidden spacer for larger screens */
+}
+
+.cards-container-inc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+/* Card styling */
+.card-incentive {
+    background-color: rgba(50, 49, 49, 0.8);
+    padding: 35px;
+    margin: 15px 0;
+    border-radius: 15px;
+    color: white;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .grid-container-inc {
+        grid-template-columns: 1fr;
+    }
+
+    .spacer-inc {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading-inc {
+        font-size: 2rem;
+    }
+
+    .card-incentive {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading-inc {
+        font-size: 1.5rem;
+    }
+
+    .card-incentive {
+        padding: 10px;
+    }
+}
+
+
+/* Image container styling */
+#image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+}
+
+.image {
+    width: 400px;
+    position: absolute;
+    transition: all 0.3s;
+    filter: blur(20px);
+}
+/* Base styles for the responsibilities section */
+/* Base styles for the responsibilities section */
+.responsibilities {
+    width: 100%;
+    height: fit-content;
+    overflow-x: hidden;
+    margin-bottom: 12rem;
+    margin-top: 8rem;
+}
+
+.head {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.head .heading {
+    width: 100%;
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.head .heading span {
+    color: white;
+}
+
+.timelineCover {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.cardCover {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: fit-content;
+}
+
+.cardIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconContainer {
+    background-color: rgba(0, 0, 0, 0.67);
+    width: 6rem;
+    height: 6rem;
+    border-width: 6px;
+    border-radius: 50%;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContent {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 6rem;
+}
+
+.cardContent h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.cardContent ul {
+    list-style-type: disc;
+    text-align: justify;
+    margin-left: 2rem;
+    gap: 0.5rem;
+}
+
+.dasshedLine {
+    border-width: 2px;
+    border-style: dashed;
+    position: absolute;
+    width: 100%; /* Adjust to stay within viewport */
+    max-width: 90vw; /* Ensure it doesn't exceed viewport width */
+    left: 0; /* Center align */
+    right: 0; /* Center align */
+    margin: 0 auto; /* Center align */
+}
+
+@media (min-width: 640px) {
+    .head {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .head .heading {
+        font-size: 2.5rem;
+    }
+
+    .timelineCover {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .cardContent {
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .head {
+        text-align: left;
+    }
+
+    .head .heading {
+        font-size: 3rem;
+    }
+
+    .timelineCover {
+        grid-template-columns: 1fr 1fr;
+        gap-x: 5rem;
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+
+    .cardIcon {
+        align-items: flex-start;
+    }
+
+    .iconContainer {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .cardContent {
+        margin-left: 6rem;
+        font-size: 1.125rem;
+    }
+
+    .cardContent h6 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .head {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+
+    .head .heading {
+        font-size: 4rem;
+    }
+
+    .timelineCover {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+
+    .dasshedLine {
+        width: 100%;
+        max-width: 90vw; /* Ensure it doesn't exceed viewport width */
+        left: 0; /* Center align */
+        right: 0; /* Center align */
+        margin: 0 auto; /* Center align */
+    }
+
+    .iconContainer {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .cardContent {
+        margin-left: 7rem;
+        font-size: 1.25rem;
+    }
+
+    .cardContent h6 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* FAQ section */
+.faqs-section {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+.header-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.heading-container {
+    margin: 0 20px;
+}
+
+.heading {
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+}
+
+.text-highlight {
+    color: white;
+}
+
+/* FAQ items styling */
+.heading-faq{
+    color: #000000;
+}
+#fa{ font-family: 'Berkshire Swash', cursive;
+    font-size: 5rem;
+    color: #ffffff;
+}
+#q,s{ font-family: 'Berkshire Swash', cursive;
+    font-size: 5em;
+    color: #cf0707;
+}
+.faq-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-item {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.question-container, .answer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.spacer {
+    flex: 2;
+}
+
+.question {
+    flex: 8;
+    font-size: 1.25rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.answer {
+    flex: 8;
+    font-size: 1.25rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+
+.toggle-icon {
+    flex: 2;
+    
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    background-color: none;
+}
+
+.display-none {
+    display: none;
+}
+
+.divider {
+    width: 69%;
+    margin: 0 auto;
+}
+
+.divider hr {
+    opacity: 0.3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .answer {
+        font-size: 1rem;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .question {
+        font-size: 0.875rem;
+    }
+
+    .answer {
+        font-size: 0.875rem;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+
+
