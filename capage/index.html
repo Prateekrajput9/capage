@@ -1,32 +1,61 @@
 
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div class="abc" >
-      
-            
-        <header class="header">
-        
-          <nav class="nav">
-          <img src="e-summit_logo.png" alt=""  id="imglogo"/>
-            <a href="#about2" class="nav-link">About Us</a>
-            <a href="#why-ca" class="nav-link">Why CA?</a>
-            <a href="#incentives" class="nav-link">Incentive</a>
-            <a href="#responsibilities" class="nav-link">Responsibilities</a>
-            <a href="#faqs" class="nav-link">FAQs</a>
-            <a href="#contact" class="nav-link">Contact Us</a>
-            <a href="http://esummit.iiti.ac.in/" target="_blank" rel="noopener noreferrer" class="nav-link">Official Page</a>
-            <a href="" class="button">
-            Download Brochure
-        </a>
-          </nav>
-        </header>
+    <div class="abc">
+  <header class="header">
+    <nav class="nav">
+      <div class="navigation-menu__overlay" onclick="toggleMenuClicked()"></div>
+      <button type="button" class="hamburger-menu" onclick="toggleMenuClicked()">
+        <span class="material-icons" id="open-icon">menu</span>
+        <span class="material-icons" id="close-icon">close</span>
+      </button>
+      <img src="e-summit_logo.png" alt="Logo" id="imglogo" />
+      <section class="navigation-menu__labels">
+        <a href="#about2" class="nav-link">About Us</a>
+        <a href="#why-ca" class="nav-link">Why CA?</a>
+        <a href="#incentives" class="nav-link">Incentive</a>
+        <a href="#responsibilities" class="nav-link">Responsibilities</a>
+        <a href="#faqs" class="nav-link">FAQs</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+        <a href="http://esummit.iiti.ac.in/" target="_blank" rel="noopener noreferrer" class="nav-link">Official Page</a>
+        <a href="" class="button">Download Brochure</a>
+      </section>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    const toggleMenuClicked = () => {
+      const body = document.body;
+      const openIcon = document.getElementById("open-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      body.classList.toggle("open");
+
+      if (body.classList.contains("open")) {
+        openIcon.style.display = "none";
+        closeIcon.style.display = "flex";
+      } else {
+        openIcon.style.display = "flex";
+        closeIcon.style.display = "none";
+      }
+    };
+  </script>
+
+
         <div class="xyz"></div>
         <div id="blur-card" class="blur-card">
         <h1>
@@ -570,6 +599,8 @@
                 minusIcon.classList.add('display-none');
             }
         }
+ 
+
         </script>
         
         
