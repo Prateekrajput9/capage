@@ -173,6 +173,7 @@ background: linear-gradient(100deg, #1b1b1b 45%, #3c0101 55%);
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.5rem;
+    margin-bottom: 100px;
 }
 
 /* Heading styling */
@@ -199,6 +200,9 @@ background: linear-gradient(100deg, #1b1b1b 45%, #3c0101 55%);
     line-height: 1.6;
     margin: 8px 35px;
 }
+.text-center{
+    margin-bottom: 100px;
+}
 
 
 
@@ -218,6 +222,83 @@ background: linear-gradient(100deg, #1b1b1b 45%, #3c0101 55%);
         max-width: 100%;
     }
 }
+/*  carousal */
+.carousel-container {
+    height: 400px;
+    display: grid;
+    width: 100%;
+    place-items: center;
+    overflow: hidden;
+    position: relative
+}
+
+.carousel-track {
+    display: flex;
+    width: 10000px;
+    transition: transform 1s linear;
+    animation: scroll 16s linear infinite;
+    padding: 0
+}
+
+.carousel-track:hover {
+    animation-play-state: paused
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-2800px)
+    }
+}
+
+.carousel-slide {
+    height: 0;
+    width: 175px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    perspective: 200px
+}
+
+.carousel-slide:hover {
+    filter: drop-shadow(-1px 6px 3px rgba(255,255,255,.4))
+}
+
+#imgdn {
+    top: 31px;
+    right: 0
+}
+
+#imgdn,#imgup {
+    width: 175px;
+    height: 175px;
+    position: relative;
+    margin: 0
+}
+
+#imgup {
+    bottom: 31px
+}
+
+img {
+    transition: transform 1s
+}
+
+img:hover {
+    transform: translateZ(50px)
+}
+
+.imag {
+    -webkit-clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+    clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+    border-radius: 50%
+}
+
+
 /* css for why ca */
 /* General container styling */
 #why-ca {
@@ -283,7 +364,7 @@ background: linear-gradient(100deg, #1b1b1b 45%, #3c0101 55%);
     height: 100%;
     backface-visibility: hidden;
     border-radius: 20px;
-    transition: transform 0.6s;
+    transition: transform .6s cubic-bezier(.4,.2,.2,1)
 }
 
 /* Front of the card-incentives */
@@ -452,7 +533,7 @@ h1 {
 }
 
 .text-white {
-    color: #750e0e;
+    color: #ffffff;
 }
 
 .highlight-text { color: white;
@@ -547,190 +628,161 @@ h1 {
 }
 /* Base styles for the responsibilities section */
 /* Base styles for the responsibilities section */
-.responsibilities {
+/* Container Styles */
+#responsibilities {
     width: 100%;
-    height: fit-content;
-    overflow-x: hidden;
-    margin-bottom: 12rem;
-    margin-top: 8rem;
-}
-
-.head {
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-bottom: 2.5rem;
-    text-align: center;
-}
-
-.head .heading {
-    width: 100%;
-    font-family: 'Berkshire Swash', cursive;
-    font-weight: 600;
-    font-size: 2rem;
-}
-
-.head .heading span {
+    padding: 2rem 0;
+   
     color: white;
 }
 
+.responsibilities {
+    width: 100%;
+    padding: 2rem 0;
+    overflow-x: hidden;
+    margin-bottom: 12rem; /* Adjust as necessary */
+    margin-top: 8rem; /* Adjust as necessary */
+}
+
+/* Heading Styles */
+.head {
+    margin: 0 3rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.heading {
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+.your{
+    color: white;
+}
+#first, #second {
+    color: #6c1111; /* Red color */
+}
+
+/* Timeline Cover Styles */
 .timelineCover {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    gap: 2.5rem;
+    margin: 0 3rem;
 }
 
+@media (min-width: 768px) {
+    .timelineCover {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem 3rem;
+    }
+}
+
+/* Card Cover Styles */
 .cardCover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: fit-content;
+    position: relative;
 }
 
 .cardIcon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.iconContainer {
-    background-color: rgba(0, 0, 0, 0.67);
-    width: 6rem;
-    height: 6rem;
-    border-width: 6px;
-    border-radius: 50%;
-    z-index: 50;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.iconContainer {
+    background-color: rgba(0, 0, 0, 0.67); /* Semi-transparent background */
+    width: 6rem;
+    height: 6rem;
+    border: 6px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.iconContainer img {
+    width: 66%;
+    height: 66%;
+    color: transparent;
+}
+
 .cardContent {
-    color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-left: 0;
     font-family: 'Josefin Sans', sans-serif;
-    margin-left: 6rem;
 }
 
+@media (min-width: 768px) {
+    .cardContent {
+        text-align: left;
+        margin-left: 6rem; /* Adjust as necessary */
+    }
+}
+
+/* Card Heading Styles */
 .cardContent h6 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: white;
-}
-
-.cardContent ul {
-    list-style-type: disc;
-    text-align: justify;
-    margin-left: 2rem;
-    gap: 0.5rem;
-}
-
-.dasshedLine {
-    border-width: 2px;
-    border-style: dashed;
-    position: absolute;
-    width: 100%; /* Adjust to stay within viewport */
-    max-width: 90vw; /* Ensure it doesn't exceed viewport width */
-    left: 0; /* Center align */
-    right: 0; /* Center align */
-    margin: 0 auto; /* Center align */
 }
 
 @media (min-width: 640px) {
-    .head {
-        margin-left: 6rem;
-        margin-right: 6rem;
-    }
-
-    .head .heading {
-        font-size: 2.5rem;
-    }
-
-    .timelineCover {
-        margin-left: 6rem;
-        margin-right: 6rem;
-    }
-
-    .cardContent {
-        text-align: left;
+    .cardContent h6 {
+        font-size: 1.5rem;
     }
 }
 
 @media (min-width: 768px) {
-    .head {
-        text-align: left;
+    .cardContent h6 {
+        font-size: 1.75rem;
     }
+}
 
-    .head .heading {
-        font-size: 3rem;
+@media (min-width: 1024px) {
+    .cardContent h6 {
+        font-size: 2rem;
     }
+}
 
-    .timelineCover {
-        grid-template-columns: 1fr 1fr;
-        gap-x: 5rem;
-        margin-left: 7rem;
-        margin-right: 7rem;
-    }
+/* Card Text Styles */
+.cardContent span ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    text-align: justify;
+}
 
-    .cardIcon {
-        align-items: flex-start;
-    }
+.cardContent span ul li {
+    font-size: 1rem;
+}
 
-    .iconContainer {
-        width: 6rem;
-        height: 6rem;
-    }
-
-    .cardContent {
-        margin-left: 6rem;
+@media (min-width: 640px) {
+    .cardContent span ul li {
         font-size: 1.125rem;
     }
+}
 
-    .cardContent h6 {
+@media (min-width: 768px) {
+    .cardContent span ul li {
         font-size: 1.25rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .head {
-        margin-left: 8rem;
-        margin-right: 8rem;
-    }
-
-    .head .heading {
-        font-size: 4rem;
-    }
-
-    .timelineCover {
-        margin-left: 8rem;
-        margin-right: 8rem;
-    }
-
-    .dasshedLine {
-        width: 100%;
-        max-width: 90vw; /* Ensure it doesn't exceed viewport width */
-        left: 0; /* Center align */
-        right: 0; /* Center align */
-        margin: 0 auto; /* Center align */
-    }
-
-    .iconContainer {
-        width: 7rem;
-        height: 7rem;
-    }
-
-    .cardContent {
-        margin-left: 7rem;
-        font-size: 1.25rem;
-    }
-
-    .cardContent h6 {
-        font-size: 1.5rem;
+    .cardContent span ul li {
+        font-size: 1.375rem;
     }
 }
+
+
+
+
+
 
 
 /* FAQ section */
@@ -770,7 +822,7 @@ h1 {
 }
 #q,s{ font-family: 'Berkshire Swash', cursive;
     font-size: 5em;
-    color: #cf0707;
+    color: #750e0e;
 }
 .faq-items {
     display: flex;
@@ -873,4 +925,27 @@ h1 {
 
 
 
-
+/* circle*/
+#first{
+    color: whitesmoke;
+}
+#second{
+    color: whitesmoke;
+}
+#why{
+    color: #750e0e;
+    font-family: "Berkshire Swash", serif;
+    color: #750e0e;
+    font-size: 60px;
+    margin-bottom: 100spx;
+}
+#ca{
+    color: whitesmoke;
+    font-family: "Berkshire Swash", serif;
+    
+    font-size: 70px;
+    margin-bottom: 100px;
+}
+.text-white{
+    color: #750e0e;
+}
